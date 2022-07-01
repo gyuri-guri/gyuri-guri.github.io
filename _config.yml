@@ -1,12 +1,6 @@
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://gyuri-guri.github.io/" # the subpath of your site, e.g. /blog
 url: "https://gyuri-guri.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Author Settings
-author: owner
-  name: Tangerri
-  image: tangerine tree.jpg
-  say-hello: Hello, I'm <strong>Tangerri</strong>
-  bio: 
 
 
 # Build settings
