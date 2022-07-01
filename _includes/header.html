@@ -1,54 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <!-- begin header -->
-      <header class="header">
-
-        <div class="logo">
-          <a class="logo__link" href="{{site.baseurl}}/">
-          {%if site.data.settings.logo %}
-            <img class="logo__image" src="{{ site.baseurl }}/images/{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
-          {% else %}
-            {{ site.data.settings.title }}
-          {% endif %}
-          </a>
-        </div>
-
-        <nav class="main-nav">
-
-          <div class="main-nav__box">
-            <div class="nav-icon__close">
-              <i class="ion ion-ios-close-circle-outline"></i>
-            </div>
-
-            <div class="nav__title">Menu</div>
-
-            <ul class="nav__list list-reset">
-              <li class="nav__item">
-                <a href="{{site.baseurl}}/" class="nav__link">Home</a>
-              </li>
-              {% for page in site.pages %}
-                {% unless page.name == 'tags.html' or page.name == '404.html' %}
-              {% if page.title %}
-              <li class="nav__item">
-                <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
-              </li>
-              {% endif %}
-                {% endunless %}
-              {% endfor %}
-            </ul>
-
-          </div>
-        </nav>
-
-        <div class="nav-buttons">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu" aria-label="Menu Icon"></i>
-          <i class="nav__icon nav__icon-search ion ion-md-search" aria-label="Search Icon"></i>
-        </div>
-
-        <div class="header__overlay"></div>
-      </header>
-      <!-- end header -->
-    </div>
+<header class="flex items-center justify-between py-6">
+  {% include logo.html %}
+  <div class="" id="menu-trigger">
+    <svg aria-hidden="true" class="text-black" data-icon="bars" data-prefix="fas" focusable="false" height="24"
+      role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+        fill="currentColor"></path>
+    </svg>
   </div>
-</div>
+</header>
